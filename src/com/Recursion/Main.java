@@ -7,6 +7,16 @@ public class Main {
     public Main(){
         this.size = 0;
     }
+    // Now inserting at the last position.
+    public void insertLast(int value){
+        if(tail==null){
+            insertFirst(value);
+            return;
+        }
+        Node node = new Node(value);
+        tail.next = node;
+        tail = node;
+    }
     public void insertFirst(int value){
         /*
         now inserting a node in a linkedlist. if we insert it from first place then the head will be the element
