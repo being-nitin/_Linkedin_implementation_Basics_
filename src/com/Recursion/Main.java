@@ -8,6 +8,10 @@ public class Main {
         this.size = 0;
     }
     public void insertFirst(int value){
+        /*
+        now inserting a node in a linkedlist. if we insert it from first place then the head will be the element
+        which will be inserted and the node.next will be the element which was head before insertion.
+         */
         Node node = new Node(value);
         node.next = head;
         head = node;
