@@ -17,6 +17,7 @@ public class Main {
         tail.next = node;
         tail = node;
     }
+
     public int deleteFirst(){
         int val =  head.value;
         head = head.next;
@@ -65,7 +66,19 @@ public class Main {
        tail = null;
        return val;
     }
-    public Node get(int index){
+    // i am giving you a particular value return me the node for it.
+
+    public Node get1(int value){
+        Node node = head;
+        while(node!=null) {
+            if(node.value==value){
+                return node;
+            }
+            node = node.next;
+        }
+        return node;
+    }
+        public Node get(int index){
         Node node = head;
         for(int i=0;i<index;i++){
             node = node.next;
