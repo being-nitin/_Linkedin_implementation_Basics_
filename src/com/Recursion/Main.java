@@ -42,6 +42,20 @@ public class Main {
         temp.next =node;
         size++;
     }
+    // deleting an element from a particular index.
+    public int delete(int index){
+        if(index==0){
+            return deleteFirst();
+        }
+        if(index==size){
+            return deleteLast();
+        }
+        Node previous = get(index-1);
+        int val = previous.next.value;
+        previous.next = previous.next.next;
+        return val;
+    }
+    // deleting the last element from a linkedlist.
     public int deleteLast(){
        if(size<=1){
            return deleteFirst();

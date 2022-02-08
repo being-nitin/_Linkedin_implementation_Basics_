@@ -1,4 +1,5 @@
 package com.Recursion;
+import java.util.*;
 
 public class mainMethod {
     public static void main(String[] args) {
@@ -12,6 +13,8 @@ public class mainMethod {
         System.out.println(list.deleteFirst());
         list.display();
         System.out.println(list.deleteLast());
+        list.display();
+        System.out.println(list.delete(2));
         list.display();
     }
 }
