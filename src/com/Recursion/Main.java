@@ -17,6 +17,21 @@ public class Main {
         tail.next = node;
         tail = node;
     }
+    public void insert(int value, int index){
+        if(index==0){
+            insertFirst(value);
+        }
+        if(index==size){
+            insertLast(value);
+        }
+        Node temp = head;
+        for(int i=1;i<index;i++){
+            temp = temp.next;
+        }
+        Node node = new Node(value,temp.next);
+        temp.next =node;
+        size++;
+    }
     public void insertFirst(int value){
         /*
         now inserting a node in a linkedlist. if we insert it from first place then the head will be the element
