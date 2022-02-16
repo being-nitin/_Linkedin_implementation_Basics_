@@ -43,7 +43,16 @@ public class Main {
         temp.next =node;
         size++;
     }
+    // recursive insertion in linkedlist.
+    private Node insertRec(int value, int index,Node node){
+
+    }
+
+
+
+
     // deleting an element from a particular index.
+
     public int delete(int index){
         if(index==0){
             return deleteFirst();
@@ -57,6 +66,7 @@ public class Main {
         return val;
     }
     // deleting the last element from a linkedlist.
+
     public int deleteLast(){
        if(size<=1){
            return deleteFirst();
@@ -66,6 +76,7 @@ public class Main {
        tail = null;
        return val;
     }
+
     // i am giving you a particular value return me the node for it.
 
     public Node get1(int value){
@@ -86,10 +97,12 @@ public class Main {
         return node;
     }
     public void insertFirst(int value){
+
         /*
         now inserting a node in a linkedlist. if we insert it from first place then the head will be the element
         which will be inserted and the node.next will be the element which was head before insertion.
          */
+
         Node node = new Node(value);
         node.next = head;
         head = node;
@@ -113,6 +126,7 @@ public class Main {
     private class Node{
         // value = value that is given in a node
         // Node = it will point to the next node.
+        
         private int value;
         private Node next;
 
