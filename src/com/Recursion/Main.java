@@ -44,13 +44,18 @@ public class Main {
         size++;
     }
     // recursive insertion in linkedlist.
-    private Node insertRec(int value, int index,Node node){
-
+    public void insertRec(int val,int index){
+        head = insertRec(val,index,head);
     }
-
-
-
-
+    private Node insertRec(int value, int index,Node node){
+        if(index==0){
+            Node temp = new Node(value,node);
+            size++;
+            return temp;
+        }
+        node.next=insertRec(value,index--,node.next);
+        return node;
+    }
     // deleting an element from a particular index.
 
     public int delete(int index){
